@@ -3,72 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration and login Form</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Login Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8fc;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 30px auto 90px;
+        }
+
+        h1 {
+            color: #6654b8;
+            text-decoration: underline;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .illustration {
+            width: 280px;
+            height: 280px;
+            background-color: #e6e9ff;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 110px;
+        }
+
+        .form-box {
+            width: 340px;
+            padding: 30px;
+            background: linear-gradient(135deg, #75b7f4, #4197e7);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .form-box h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .form-box input:not([type="checkbox"]) {
+            width: 100%;
+            padding: 12px;
+            margin: 9px 0;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .form-box button {
+            width: 100%;
+            padding: 12px;
+            background-color: #087acb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .form-box button:hover {
+            background-color: #075da0;
+        }
+
+        .remember {
+            color: white;
+            font-size: 13px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .form-link {
+            color: white;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Registration Form -->
+
+    <section class="section">
+
+        <h1>Registration Form</h1>
+
+        <div class="container">
+
+            <div class="illustration">
+                🧑🏻‍💻
+            </div>
+
+            <form class="form-box">
+
+                <h2>Sign Up</h2>
+
+                <input type="text" placeholder="First Name" required>
+
+                <input type="text" placeholder="Last Name" required>
+
+                <input type="email" placeholder="E-mail" required>
+
+                <input type="password" placeholder="Password" required>
+
+                <p class="form-link">
+                    Already a member? Log In
+                </p>
+
+                <button type="submit">Register</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Login Form -->
+
+    <section class="section">
+
+        <h1>Login Form</h1>
+
+        <div class="container">
+
+            <div class="illustration">
+                👨🏻‍💻
+            </div>
+
+            <form class="form-box">
+
+                <h2>Sign In</h2>
+
+                <input type="email" placeholder="E-mail" required>
+
+                <input type="password" placeholder="Password" required>
+
+                <div class="remember">
+                    <input type="checkbox">
+                    Remember Me
+                </div>
+
+                <button type="submit">Login</button>
+
+                <p class="form-link">
+                    Forgot Password?
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
+       
 </head>
 <body>
     
 </body>
 </html>
-<h1>Hi I am Home page</h1>
-
-<h3>Welcome to home page</h3>
-
-<p>Navbar</p>
-
-<ul>
-    <li><a href="contact.html">contact</
-        a></li>
-        <li><a href="about.html">About<a></
-            li>
-            <li><a
-                href="servives.html">Services</a></li>
-                </ul>
-
-                <hr>
-
-                <br>
-
-                <p>Biryani Recipe</p>
-
-                <ol>
-                    <li>chop potatoes into quarters</li>
-                    <li>simmer in salted water for 15-20 minutes until tender</li>
-                    <li>Heat milk, butter and nutmeg</li>
-                    <li>Drain potatoes and mash</li>
-                    <li>Mix in the  <i>milk mixture</i></li>
-                    </ol>
-
-                    <ul>
-                        <li>C<sub>6</sub>H<sub>6</sub>0<sub>6</sub></li>
-                        <li>CH<sub>2</sub> + 20<sub>2</sub></li>
-                        <li>On the 4<sup>th</sup> of september you will learn about E=MC<sup>2</sup></li>
-                        <li>As A.A. Milne said, "some people talk to animals. Not many listen though. That's the problem."</li>
-                        </ul>
-
-                        <hr>
-
-                    </body>
-                    </html>
-
-                    
-        
-                
-
-                    
-                
-                
-
-                    
-
-                    
-                    
-
-
-                    
-                
-                
-            
-        
-
-
-
