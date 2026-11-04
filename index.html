@@ -1,207 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration and login Form</title>
+
     <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration and Login Form</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f8f8fc;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        .section {
-            max-width: 900px;
-            margin: 30px auto 90px;
-        }
-
-        h1 {
-            color: #6654b8;
-            text-decoration: underline;
-            font-size: 35px;
-            margin-bottom: 40px;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .illustration {
-            width: 280px;
-            height: 280px;
-            background-color: #e6e9ff;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 110px;
-        }
-
-        .form-box {
-            width: 340px;
-            padding: 30px;
-            background: linear-gradient(135deg, #75b7f4, #4197e7);
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-
-        .form-box h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .form-box input:not([type="checkbox"]) {
-            width: 100%;
-            padding: 12px;
-            margin: 9px 0;
-            border: none;
-            border-radius: 4px;
-            outline: none;
-            font-size: 14px;
-        }
-
-        .form-box button {
-            width: 100%;
-            padding: 12px;
-            background-color: #087acb;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-
-        .form-box button:hover {
-            background-color: #075da0;
-        }
-
-        .remember {
-            color: white;
-            font-size: 13px;
-            text-align: left;
-            margin-top: 10px;
-        }
-
-        .form-link {
-            color: white;
-            font-size: 13px;
-            margin-top: 15px;
-        }
-
-        @media (max-width: 650px) {
-            .container {
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <title>LUGX Gaming</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Registration Form -->
+    <div class="hero">
 
-    <section class="section">
-
-        <h1>Registration Form</h1>
-
-        <div class="container">
-
-            <div class="illustration">
-                🧑🏻‍💻
+        <header>
+            <div class="logo">
+                <h2>✥ LUGX</h2>
             </div>
 
-            <form class="form-box">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Our Shop</a>
+                <a href="#">Product Details</a>
+                <a href="#">Contact Us</a>
+                <button>SIGN IN</button>
+            </nav>
+        </header>
 
-                <h2>Sign Up</h2>
+        <section class="main">
 
-                <input type="text" placeholder="First Name" required>
+            <div class="content">
+                <h4>WELCOME TO LUGX</h4>
 
-                <input type="text" placeholder="Last Name" required>
+                <h1>BEST <span>GAMING</span> SITE EVER!</h1>
 
-                <input type="email" placeholder="E-mail" required>
-
-                <input type="password" placeholder="Password" required>
-
-                <p class="form-link">
-                    Already a member? Log In
+                <p>
+                    LUGX Gaming is a free Bootstrap 5 HTML CSS website
+                    template for your gaming websites. You can download
+                    and use this layout for commercial purposes.
+                    Please tell your friends about TemplateMo.
                 </p>
 
-                <button type="submit">Register</button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-    <!-- Login Form -->
-
-    <section class="section">
-
-        <h1>Login Form</h1>
-
-        <div class="container">
-
-            <div class="illustration">
-                👨🏻‍💻
-            </div>
-
-            <form class="form-box">
-
-                <h2>Sign In</h2>
-
-                <input type="email" placeholder="E-mail" required>
-
-                <input type="password" placeholder="Password" required>
-
-                <div class="remember">
-                    <input type="checkbox">
-                    Remember Me
+                <div class="search">
+                    <input type="text" placeholder="Type Something">
+                    <button>SEARCH NOW</button>
                 </div>
+            </div>
 
-                <button type="submit">Login</button>
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600" alt="Gaming Character">
 
-                <p class="form-link">
-                    Forgot Password?
-                </p>
+                <span class="price">$22</span>
+                <span class="discount">-40%</span>
+            </div>
 
-            </form>
+        </section>
 
-        </div>
-
-    </section>
+    </div>
 
 </body>
 </html>
-       
-</head>
-<body>
     
 </body>
 </html>
