@@ -3,196 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Designer Portfolio</title>
+    <title>Cristian Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navbar -->
+<header>
+    <div class="logo">◉ Cristian Muñoz</div>
     <nav>
-        <h3>Logo</h3>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">Blog</a>
     </nav>
+    <a href="#contact" class="contact">Contact Me</a>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <p>Branding &nbsp; Image making</p>
-            <h1>Visual Designer</h1>
-            <p>
-                This is a simple portfolio website for a
-                creative visual designer.
-            </p>
-            <button>Contact</button>
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Hi, I am<br>Cristian 🎨</h1>
+        <p>
+            I am a UI/UX Designer. I like to make interfaces
+            simple and aesthetically pleasing for users.
+            The idea is not to create an interface for creating
+            it, it is that users prefer you because your product
+            is easy to use.
+        </p>
+        <a href="#contact" class="button">¡Contact Me! ↗️</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1791346999/assignment/assignment/1791346997_0_xk7r4hqi.png" alt="Designer illustration">
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill-grid">
+        <div class="skill">
+            <div class="circle" style="--percent:90"><span>90%</span></div>
+            <p>Figma /<br>Adobe XD</p>
         </div>
 
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500"
-                 alt="Designer">
+        <div class="skill">
+            <div class="circle" style="--percent:80"><span>80%</span></div>
+            <p>UI Design</p>
         </div>
-    </section>
 
-    <!-- Company Logos -->
-    <section class="brands">
-        <h3>Google</h3>
-        <h3>Nike</h3>
-        <h3>SAMSUNG</h3>
-        <h3>Apple</h3>
-        <h3>Adidas</h3>
-    </section>
-
-    <!-- Services -->
-    <section id="services">
-        <h2>My Services</h2>
-
-        <div class="services">
-            <div class="service">
-                <div class="circle pink">↗️</div>
-                <h3>Product Design</h3>
-                <p>Creative and modern product design for your business.</p>
-            </div>
-
-            <div class="service">
-                <div class="circle red">↗️</div>
-                <h3>Visual Design</h3>
-                <p>Beautiful visual designs to improve your brand.</p>
-            </div>
-
-            <div class="service">
-                <div class="circle green">↗️</div>
-                <h3>Art Direction</h3>
-                <p>Professional art direction and creative ideas.</p>
-            </div>
+        <div class="skill">
+            <div class="circle" style="--percent:80"><span>80%</span></div>
+            <p>Information<br>Architecture</p>
         </div>
-    </section>
 
-    <!-- Recent Projects -->
-    <section id="projects">
-        <h2>Recent Projects</h2>
-
-        <div class="projects">
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Project">
-                <h4>Project One</h4>
-                <p>UI & Illustration</p>
-            </div>
-
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=500" alt="Project">
-                <h4>Project Two</h4>
-                <p>Brand Identity</p>
-            </div>
-
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?w=500" alt="Project">
-                <h4>Project Three</h4>
-                <p>Product Design</p>
-            </div>
-
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500" alt="Project">
-                <h4>Project Four</h4>
-                <p>Book Design</p>
-            </div>
-
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500" alt="Project">
-                <h4>Project Five</h4>
-                <p>Website Design</p>
-            </div>
-
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=500" alt="Project">
-                <h4>Project Six</h4>
-                <p>Graphic Design</p>
-            </div>
+        <div class="skill">
+            <div class="circle" style="--percent:70"><span>70%</span></div>
+            <p>UX Design</p>
         </div>
-    </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <h2>Client Testimonials</h2>
+        <div class="skill">
+            <div class="circle" style="--percent:70"><span>70%</span></div>
+            <p>Prototyping</p>
+        </div>
 
-        <div class="reviews">
-            <div class="review">
-                <p>This is a fantastic design. I am very happy with the work.</p>
-                <h4>★★★★★</h4>
-                <h5>John Smith</h5>
-                <small>Google</small>
+        <div class="skill">
+            <div class="circle" style="--percent:70"><span>70%</span></div>
+            <p>Box Model</p>
+        </div>
+
+        <div class="skill">
+            <div class="circle" style="--percent:70"><span>70%</span></div>
+            <p>Business Model<br>Canvas</p>
+        </div>
+
+        <div class="skill">
+            <div class="circle" style="--percent:70"><span>70%</span></div>
+            <p>Design Systems</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>About Me</h2>
+
+    <div class="about-card">
+        <div class="about-item">
+            <div class="icon">🏅</div>
+            <h3>100%</h3>
+            <p>Responsibility</p>
+        </div>
+
+        <div class="country">
+            <div class="flag"></div>
+            <h3>100%</h3>
+            <p>Colombian</p>
+        </div>
+
+        <div class="about-item">
+            <div class="icon">📅</div>
+            <h3>100%</h3>
+            <p>Punctuality</p>
+        </div>
+    </div>
+
+    <section class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+
+        <div class="project-grid">
+            <div class="project">
+                <div class="preview preview-one">
+                    <span>Eventos Premium</span>
+                </div>
+                <h3>Eventos Premium</h3>
+                <p>Elegante - Serio - Exclusivo</p>
             </div>
 
-            <div class="review">
-                <p>This is an amazing experience. Excellent work and design.</p>
-                <h4>★★★★★</h4>
-                <h5>David Wilson</h5>
-                <small>Client</small>
+            <div class="project">
+                <div class="preview preview-two">
+                    <span>Mi Portal U</span>
+                </div>
+                <h3>Mi Portal U</h3>
+                <p>Amigable - Dashboard - Simple</p>
             </div>
 
-            <div class="review">
-                <p>This is a beautiful website. I really love the design.</p>
-                <h4>★★★★★</h4>
-                <h5>James Brown</h5>
-                <small>Client</small>
-            </div>
-
-            <div class="review">
-                <p>Very professional and creative work. Highly recommended.</p>
-                <h4>★★★★★</h4>
-                <h5>Michael</h5>
-                <small>Client</small>
-            </div>
-
-            <div class="review">
-                <p>Great design and excellent communication. Thank you!</p>
-                <h4>★★★★★</h4>
-                <h5>Robert</h5>
-                <small>Client</small>
-            </div>
-
-            <div class="review">
-                <p>Amazing work. I am completely satisfied with the results.</p>
-                <h4>★★★★★</h4>
-                <h5>William</h5>
-                <small>Client</small>
+            <div class="project">
+                <div class="preview preview-three">
+                    <span>A&C App</span>
+                </div>
+                <h3>A&C App</h3>
+                <p>Elegante - Serio - Estatus</p>
             </div>
         </div>
     </section>
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div>
-            <h2>Let's work together</h2>
-            <p>Have a project in mind? Contact me today.</p>
-        </div>
+<footer id="contact">
+    <div class="socials">◎　f　in　♥️</div>
+    <p>Cristian David Muñoz Camayo © 2022</p>
+</footer>
 
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Visual Designer. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
-    
 </body>
 </html>
