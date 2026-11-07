@@ -1,146 +1,1060 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristian Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamVibe</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: white;
+    font-family: 'Manrope', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    width: 88%;
+    max-width: 1240px;
+    margin: auto;
+}
+
+header {
+    height: 76px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+      align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: red;
+}
+
+.navlinks {
+    display: flex;
+    gap: 8px;
+    background: #111;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.navlinks a {
+    font-size: 12px;
+    padding: 9px 13px;
+    color: #ccc;
+}
+
+.navlinks a:first-child {
+    background: #252525;
+    color: white;
+}
+
+.navicons {
+    font-size: 20px;
+}
+
+.hero {
+    height: 690px;
+    position: relative;
+    overflow: hidden;
+    background: #101010;
+}
+
+.poster-wall {
+    position: absolute;
+    inset: 0 0 170px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 145px;
+    gap: 7px;
+    opacity: .8;
+}
+
+.poster {
+    position: relative;
+    background: linear-gradient(145deg,#473b3b,#171717,#812c2c);
+    overflow: hidden;
+}
+
+.poster:nth-child(3n) {
+    background: linear-gradient(145deg,#173a50,#171717,#a34b25);
+}
+
+.poster:nth-child(4n) {
+    background: linear-gradient(145deg,#4d294f,#171717,#b56b2a);
+}
+
+.poster:nth-child(5n) {
+    background: linear-gradient(145deg,#52634a,#171717,#182a40);
+}
+
+.poster span {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    right: 5px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        #08080855,
+        #111 68%,
+        #141414
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 380px;
+    max-width: 780px;
+    margin: auto;
+}
+
+.play-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #ffffff20;
+    border: 1px solid #ffffff66;
+    display: grid;
+    place-items: center;
+    margin: -95px auto 72px;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.red-btn {
+    background: #e50000;
+    color: white;
+    padding: 13px 19px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+section {
+    padding: 55px 0;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 28px;
+}
+
+h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.section-intro {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.arrows {
+    display: flex;
+    gap: 8px;
+    background: #0e0e0e;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.arrows button {
+    width: 34px;
+    height: 34px;
+    background: #202020;
+    color: white;
+    border: none;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 18px;
+}
+
+.category-card {
+    background: #1a1a1a;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.mini-posters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    height: 128px;
+    margin-bottom: 12px;
+}
+
+.mini-posters i {
+    background: linear-gradient(135deg,#a85a37,#171717,#283c54);
+    border-radius: 4px;
+}
+
+.mini-posters i:nth-child(2) {
+    background: linear-gradient(135deg,#d3a34b,#26211a,#263c31);
+}
+
+.mini-posters i:nth-child(3) {
+    background: linear-gradient(135deg,#374e72,#151515,#8b3c32);
+}
+
+.mini-posters i:nth-child(4) {
+    background: linear-gradient(135deg,#7a3655,#171717,#304a3d);
+}
+
+.category-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.category-bottom span {
+    font-size: 19px;
+}
+
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.device-card {
+    background: linear-gradient(115deg,#1a1a1a,#171313);
+    border: 1px solid #242020;
+    border-radius: 8px;
+    padding: 25px 24px;
+    min-height: 145px;
+}
+
+.device-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.device-icon {
+    width: 36px;
+    height: 36px;
+    background: #111;
+    color: red;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
+.device-card p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #999;
+}
+
+.faq-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #292929;
+    padding: 13px 0;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    cursor: pointer;
+    min-height: 38px;
+}
+
+.faq-num {
+    background: #202020;
+    padding: 9px 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.faq-question strong {
+    font-size: 12px;
+    flex: 1;
+}
+
+.faq-toggle {
+    font-size: 20px;
+}
+
+.faq-answer {
+    display: none;
+    color: #999;
+    font-size: 11px;
+    line-height: 1.7;
+    padding: 8px 35px 8px 44px;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.pricing {
+    padding-top: 75px;
+    padding-bottom: 80px;
+}
+
+.pricing-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.billing {
+    display: flex;
+    background: #0d0d0d;
+    padding: 5px;
+    border: 1px solid #292929;
+    border-radius: 8px;
+}
+
+.billing button {
+    background: transparent;
+    color: #aaa;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.billing button.active {
+    background: #252525;
+    color: white;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.plan {
+    background: #1a1a1a;
+    border: 1px solid #252525;
+    border-radius: 8px;
+    padding: 28px 30px;
+}
+
+.plan h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.plan p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #999;
+    min-height: 62px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.price small {
+    font-size: 12px;
+    color: #aaa;
+    font-weight: normal;
+}
+
+.plan-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.dark-btn,
+.choose-btn {
+    flex: 1;
+    text-align: center;
+    padding: 13px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.dark-btn {
+    background: #111;
+    border: 1px solid #292929;
+}
+
+.choose-btn {
+    background: #e50000;
+}
+
+.trial-banner {
+    margin-top: 75px;
+    min-height: 210px;
+    border-radius: 9px;
+    padding: 45px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: linear-gradient(
+        90deg,
+        #080808,
+        #171010dd,
+        #3b1111aa
+    );
+    border: 1px solid #2b1b1b;
+}
+
+.trial-copy h2 {
+    font-size: 30px;
+}
+
+.trial-copy p {
+    color: #999;
+    font-size: 12px;
+}
+
+footer {
+    background: #0e0e0e;
+    padding: 65px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 25px;
+    padding-bottom: 55px;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 13px;
+}
+
+.socials {
+    display: flex;
+    gap: 9px;
+}
+
+.socials a {
+    background: #1c1c1c;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #252525;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 11px;
+}
+
+.legal {
+    display: flex;
+    gap: 20px;
+}
+
+@media(max-width:850px) {
+    .container {
+        width: 90%;
+    }
+
+    .poster-wall {
+        grid-template-columns: repeat(6,1fr);
+        grid-auto-rows: 120px;
+    }
+
+    .hero {
+        height: 620px;
+    }
+
+    .hero-content {
+        padding: 350px 20px 0;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .device-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(max-width:560px) {
+    .navlinks a {
+        font-size: 9px;
+        padding: 7px 5px;
+    }
+
+    .hero {
+        height: 570px;
+    }
+
+    .poster-wall {
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: 105px;
+    }
+
+    .hero-content {
+        padding-top: 315px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .device-grid,
+    .plan-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-head,
+    .faq-head,
+    .pricing-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .trial-banner {
+        padding: 30px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .legal {
+        flex-wrap: wrap;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">◉ Cristian Muñoz</div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">Blog</a>
+<div class="container nav">
+    <a class="logo" href="#"><span>◉</span> StreamVibe</a>
+
+    <nav class="navlinks">
+        <a href="#">Home</a>
+        <a href="#categories">Movies &amp; Shows</a>
+        <a href="#faq">Support</a>
+        <a href="#pricing">Subscriptions</a>
     </nav>
-    <a href="#contact" class="contact">Contact Me</a>
+
+    <div class="navicons">⌕　♧</div>
+</div>
 </header>
 
-<section class="hero" id="home">
-    <div class="hero-text">
-        <h1>Hi, I am<br>Cristian 🎨</h1>
-        <p>
-            I am a UI/UX Designer. I like to make interfaces
-            simple and aesthetically pleasing for users.
-            The idea is not to create an interface for creating
-            it, it is that users prefer you because your product
-            is easy to use.
+<main>
+
+<section class="hero">
+
+<div class="poster-wall">
+    <div class="poster"><span>MIDNIGHT HUNT</span></div>
+    <div class="poster"><span>THE LAST KINGDOM</span></div>
+    <div class="poster"><span>1899</span></div>
+    <div class="poster"><span>WEDNESDAY</span></div>
+    <div class="poster"><span>THE WITCHER</span></div>
+    <div class="poster"><span>YOU</span></div>
+    <div class="poster"><span>JUNGLE</span></div>
+    <div class="poster"><span>THE BUNKER</span></div>
+    <div class="poster"><span>AVENGERS</span></div>
+    <div class="poster"><span>JURASSIC LEGACY</span></div>
+    <div class="poster"><span>THE NIGHT</span></div>
+    <div class="poster"><span>THE RUN</span></div>
+    <div class="poster"><span>THE DEEP</span></div>
+    <div class="poster"><span>THE GREY</span></div>
+    <div class="poster"><span>FANTASY</span></div>
+    <div class="poster"><span>MOONLIGHT</span></div>
+    <div class="poster"><span>THE HUNT</span></div>
+    <div class="poster"><span>THOR</span></div>
+    <div class="poster"><span>THE CITY</span></div>
+    <div class="poster"><span>DRAMA</span></div>
+    <div class="poster"><span>THE STORY</span></div>
+    <div class="poster"><span>ANT-MAN</span></div>
+    <div class="poster"><span>THE HERO</span></div>
+    <div class="poster"><span>THE DARK</span></div>
+    <div class="poster"><span>THE DEER HUNTER</span></div>
+    <div class="poster"><span>THE LAST</span></div>
+    <div class="poster"><span>GOLD</span></div>
+</div>
+
+<div class="hero-content">
+    <div class="play-icon">▶️</div>
+
+    <h1>The Best Streaming Experience</h1>
+
+    <p>
+    StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch.
+    </p>
+
+    <a class="red-btn" href="#categories">▶️ Start Watching Now</a>
+</div>
+
+</section>
+
+<section id="categories">
+<div class="container">
+
+<div class="section-head">
+    <div>
+        <h2>Explore our wide variety of categories</h2>
+        <p class="section-intro">
+        Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new
         </p>
-        <a href="#contact" class="button">¡Contact Me! ↗️</a>
     </div>
 
-    <div class="hero-image">
-        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1791346999/assignment/assignment/1791346997_0_xk7r4hqi.png" alt="Designer illustration">
+    <div class="arrows">
+        <button>←</button>
+        <span>━━━</span>
+        <button>→</button>
     </div>
+</div>
+
+<div class="category-grid">
+
+<div class="category-card">
+    <div class="mini-posters"><i></i><i></i><i></i><i></i></div>
+    <div class="category-bottom"><b>Action</b><span>→</span></div>
+</div>
+
+<div class="category-card">
+    <div class="mini-posters"><i></i><i></i><i></i><i></i></div>
+    <div class="category-bottom"><b>Adventure</b><span>→</span></div>
+</div>
+
+<div class="category-card">
+    <div class="mini-posters"><i></i><i></i><i></i><i></i></div>
+    <div class="category-bottom"><b>Comedy</b><span>→</span></div>
+</div>
+
+<div class="category-card">
+    <div class="mini-posters"><i></i><i></i><i></i><i></i></div>
+    <div class="category-bottom"><b>Drama</b><span>→</span></div>
+</div>
+
+<div class="category-card">
+    <div class="mini-posters"><i></i><i></i><i></i><i></i></div>
+    <div class="category-bottom"><b>Horror</b><span>→</span></div>
+</div>
+
+</div>
+</div>
 </section>
 
-<section class="skills" id="skills">
-    <h2>Skills</h2>
+<section>
+<div class="container">
 
-    <div class="skill-grid">
-        <div class="skill">
-            <div class="circle" style="--percent:90"><span>90%</span></div>
-            <p>Figma /<br>Adobe XD</p>
-        </div>
+<h2>We Provide you streaming experience across various devices.</h2>
 
-        <div class="skill">
-            <div class="circle" style="--percent:80"><span>80%</span></div>
-            <p>UI Design</p>
-        </div>
+<p class="section-intro">
+With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment.
+</p>
 
-        <div class="skill">
-            <div class="circle" style="--percent:80"><span>80%</span></div>
-            <p>Information<br>Architecture</p>
-        </div>
+<div class="device-grid">
 
-        <div class="skill">
-            <div class="circle" style="--percent:70"><span>70%</span></div>
-            <p>UX Design</p>
-        </div>
+<div class="device-card">
+    <div class="device-title"><span class="device-icon">▯</span>Smartphones</div>
+    <p>StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+</div>
 
-        <div class="skill">
-            <div class="circle" style="--percent:70"><span>70%</span></div>
-            <p>Prototyping</p>
-        </div>
+<div class="device-card">
+    <div class="device-title"><span class="device-icon">▯</span>Tablet</div>
+    <p>StreamVibe is optimized for both Android and iOS tablets. Download our app from the Google Play Store or the Apple App Store</p>
+</div>
 
-        <div class="skill">
-            <div class="circle" style="--percent:70"><span>70%</span></div>
-            <p>Box Model</p>
-        </div>
+<div class="device-card">
+    <div class="device-title"><span class="device-icon">▰</span>Smart TV</div>
+    <p>StreamVibe is optimized for both Android and iOS platforms. Download our app from the Google Play Store or the Apple App Store</p>
+</div>
 
-        <div class="skill">
-            <div class="circle" style="--percent:70"><span>70%</span></div>
-            <p>Business Model<br>Canvas</p>
-        </div>
+<div class="device-card">
+    <div class="device-title"><span class="device-icon">▣</span>Laptops</div>
+    <p>StreamVibe is optimized for both Android and iOS platforms. Download our app from the Google Play Store or the Apple App Store</p>
+</div>
 
-        <div class="skill">
-            <div class="circle" style="--percent:70"><span>70%</span></div>
-            <p>Design Systems</p>
-        </div>
-    </div>
+<div class="device-card">
+    <div class="device-title"><span class="device-icon">⌘</span>Gaming Consoles</div>
+    <p>StreamVibe is optimized for both Android and iOS platforms. Download our app from the Google Play Store or the Apple App Store</p>
+</div>
+
+<div class="device-card">
+    <div class="device-title"><span class="device-icon">♧</span>VR Headsets</div>
+    <p>StreamVibe is optimized for both Android and iOS platforms. Download our app from the Google Play Store or the Apple App Store</p>
+</div>
+
+</div>
+</div>
 </section>
 
-<section class="about" id="about">
-    <h2>About Me</h2>
+<section class="faq" id="faq">
+<div class="container">
 
-    <div class="about-card">
-        <div class="about-item">
-            <div class="icon">🏅</div>
-            <h3>100%</h3>
-            <p>Responsibility</p>
-        </div>
-
-        <div class="country">
-            <div class="flag"></div>
-            <h3>100%</h3>
-            <p>Colombian</p>
-        </div>
-
-        <div class="about-item">
-            <div class="icon">📅</div>
-            <h3>100%</h3>
-            <p>Punctuality</p>
-        </div>
+<div class="faq-head">
+    <div>
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-intro">
+        Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe.
+        </p>
     </div>
 
-    <section class="portfolio" id="portfolio">
-        <h2>Portfolio</h2>
+    <a href="#" class="red-btn">Ask a Question</a>
+</div>
 
-        <div class="project-grid">
-            <div class="project">
-                <div class="preview preview-one">
-                    <span>Eventos Premium</span>
-                </div>
-                <h3>Eventos Premium</h3>
-                <p>Elegante - Serio - Exclusivo</p>
-            </div>
+<div class="faq-grid">
 
-            <div class="project">
-                <div class="preview preview-two">
-                    <span>Mi Portal U</span>
-                </div>
-                <h3>Mi Portal U</h3>
-                <p>Amigable - Dashboard - Simple</p>
-            </div>
+<div>
 
-            <div class="project">
-                <div class="preview preview-three">
-                    <span>A&C App</span>
-                </div>
-                <h3>A&C App</h3>
-                <p>Elegante - Serio - Estatus</p>
-            </div>
-        </div>
-    </section>
+<div class="faq-item open">
+    <div class="faq-question">
+        <span class="faq-num">01</span>
+        <strong>What is StreamVibe?</strong>
+        <span class="faq-toggle">−</span>
+    </div>
+    <p class="faq-answer">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-num">02</span>
+        <strong>How much does StreamVibe cost?</strong>
+        <span class="faq-toggle">+</span>
+    </div>
+    <p class="faq-answer">Choose a plan that fits your viewing preferences.</p>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-num">03</span>
+        <strong>What content is available on StreamVibe?</strong>
+        <span class="faq-toggle">+</span>
+    </div>
+    <p class="faq-answer">You can explore movies, shows, and different categories.</p>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-num">04</span>
+        <strong>How can I watch StreamVibe?</strong>
+        <span class="faq-toggle">+</span>
+    </div>
+    <p class="faq-answer">Watch on supported phones, tablets, TVs, laptops, and consoles.</p>
+</div>
+
+</div>
+
+<div>
+
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-num">05</span>
+        <strong>How do I sign up for StreamVibe?</strong>
+        <span class="faq-toggle">+</span>
+    </div>
+    <p class="faq-answer">Select a subscription plan and follow the sign-up steps.</p>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-num">06</span>
+        <strong>What is the StreamVibe free trial?</strong>
+        <span class="faq-toggle">+</span>
+    </div>
+    <p class="faq-answer">A free trial lets eligible new members try the service.</p>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-num">07</span>
+        <strong>How do I contact StreamVibe customer support?</strong>
+        <span class="faq-toggle">+</span>
+    </div>
+    <p class="faq-answer">Use the contact us link to reach customer support.</p>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-num">08</span>
+        <strong>What are the StreamVibe payment methods?</strong>
+        <span class="faq-toggle">+</span>
+    </div>
+    <p class="faq-answer">Available payment methods are shown during checkout.</p>
+</div>
+
+</div>
+</div>
+</div>
 </section>
 
-<footer id="contact">
-    <div class="socials">◎　f　in　♥️</div>
-    <p>Cristian David Muñoz Camayo © 2022</p>
+<section class="pricing" id="pricing">
+<div class="container">
+
+<div class="pricing-head">
+    <div>
+        <h2>Choose the plan that's right for you</h2>
+        <p class="section-intro">
+        Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!
+        </p>
+    </div>
+
+    <div class="billing">
+        <button class="active" data-period="monthly">Monthly</button>
+        <button data-period="yearly">Yearly</button>
+    </div>
+</div>
+
+<div class="plan-grid">
+
+<div class="plan">
+    <h3>Basic Plan</h3>
+    <p>Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles.</p>
+    <div class="price" data-month="9.99" data-year="99.99">$9.99<small> /month</small></div>
+    <div class="plan-actions">
+        <a class="dark-btn" href="#">Start Free Trial</a>
+        <a class="choose-btn" href="#">Choose Plan</a>
+    </div>
+</div>
+
+<div class="plan">
+    <h3>Standard Plan</h3>
+    <p>Access to a wider selection of movies and shows, including most new releases and exclusive content.</p>
+    <div class="price" data-month="12.99" data-year="129.99">$12.99<small> /month</small></div>
+    <div class="plan-actions">
+        <a class="dark-btn" href="#">Start Free Trial</a>
+        <a class="choose-btn" href="#">Choose Plan</a>
+    </div>
+</div>
+
+<div class="plan">
+    <h3>Premium Plan</h3>
+    <p>Access to a widest selection of movies and shows, including all new releases and Offline Viewing.</p>
+    <div class="price" data-month="14.99" data-year="149.99">$14.99<small> /month</small></div>
+    <div class="plan-actions">
+        <a class="dark-btn" href="#">Start Free Trial</a>
+        <a class="choose-btn" href="#">Choose Plan</a>
+    </div>
+</div>
+
+</div>
+
+<div class="trial-banner">
+    <div class="trial-copy">
+        <h2>Start your free trial today!</h2>
+        <p>This is a clear and concise call to action that encourages users to sign up for a free trial of StreamVibe.</p>
+    </div>
+
+    <a href="#" class="red-btn">Start a Free Trial</a>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-col">
+    <h4>Home</h4>
+    <a href="#categories">Categories</a>
+    <a href="#">Devices</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+</div>
+
+<div class="footer-col">
+    <h4>Movies</h4>
+    <a href="#">Genres</a>
+    <a href="#">Trending</a>
+    <a href="#">New Release</a>
+    <a href="#">Popular</a>
+</div>
+
+<div class="footer-col">
+    <h4>Shows</h4>
+    <a href="#">Genres</a>
+    <a href="#">Trending</a>
+    <a href="#">New Release</a>
+    <a href="#">Popular</a>
+</div>
+
+<div class="footer-col">
+    <h4>Support</h4>
+    <a href="#">Contact Us</a>
+</div>
+
+<div class="footer-col">
+    <h4>Subscription</h4>
+    <a href="#pricing">Plans</a>
+    <a href="#">Features</a>
+</div>
+
+<div class="footer-col">
+    <h4>Connect With Us</h4>
+    <div class="socials">
+        <a href="#">f</a>
+        <a href="#">♥️</a>
+        <a href="#">in</a>
+    </div>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+    <span>©2023 streamvibe. All Rights Reserved</span>
+
+    <div class="legal">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+    </div>
+</div>
+
+</div>
 </footer>
+
+<script>
+
+document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+
+        const item = q.parentElement;
+
+        item.classList.toggle('open');
+
+        q.querySelector('.faq-toggle').textContent =
+        item.classList.contains('open') ? '−' : '+';
+
+    });
+});
+
+document.querySelectorAll('.billing button').forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        document.querySelectorAll('.billing button')
+        .forEach(b => b.classList.remove('active'));
+
+        btn.classList.add('active');
+
+        document.querySelectorAll('.price').forEach(price => {
+
+            const amount =
+            btn.dataset.period === 'yearly'
+            ? price.dataset.year
+            : price.dataset.month;
+
+            price.innerHTML =
+            '$' + amount +
+            '<small> /' +
+            (btn.dataset.period === 'yearly' ? 'year' : 'month') +
+            '</small>';
+
+        });
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
+  
