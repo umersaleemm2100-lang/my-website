@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 9-11</title>
+</head>
+<body>
+
+<script>
+
+// Q1 - City
+var city = prompt("Enter your city name");
+if(city === "Karachi"){
+  alert("Welcome to city of lights");
+}
+
+// Q2 - Gender
+var gender = prompt("Enter your gender");
+if(gender === "male"){
+  alert("Good Morning Sir");
+}
+else if(gender === "female"){
+  alert("Good Morning Ma'am");
+}
+
+// Q3 - Traffic Signal
+var color = prompt("Enter color of road traffic signal");
+if(color === "Red"){
+  alert("Must Stop");
+}
+else if(color === "Yellow"){
+  alert("Ready to move");
+}
+else if(color === "Green"){
+  alert("Move now");
+}
+
+// Q4 - Fuel
+var fuel = +prompt("Enter remaining fuel in car in litres");
+if(fuel < 0.25){
+  alert("Please refill the fuel in your car");
+}
+
+// Q5 - a
+var a = 4;
+if(++a === 5){
+  alert("given condition for variable a is true");
+}
+
+// Q5 - b
+var b = 82;
+if(b++ === 83){
+  alert("given condition for variable b is true");
+}
+
+// Q5 - c
+var c = 12;
+if(c++ === 13){
+  alert("condition 1 is true");
+}
+if(c === 13){
+  alert("condition 2 is true");
+}
+if(++c < 14){
+  alert("condition 3 is true");
+}
+if(c === 14){
+  alert("condition 4 is true");
+}
+
+// Q5 - d
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if(totalCost === laborCost + materialCost){
+  alert("The cost equals");
+}
+
+// Q5 - e
+if(true){
+  alert("True");
+}
+if(false){
+  alert("False");
+}
+
+// Q5 - f
+if("car" < "cat"){
+  alert("car is smaller than cat");
+}
+
+// Q6 - Mark Sheet
+var totalMarks = +prompt("Enter total marks");
+var obtained1 = +prompt("Enter marks obtained in subject 1");
+var obtained2 = +prompt("Enter marks obtained in subject 2");
+var obtained3 = +prompt("Enter marks obtained in subject 3");
+var marksObtained = obtained1 + obtained2 + obtained3;
+var percentage = (marksObtained / totalMarks) * 100;
+var grade, remarks;
+if(percentage >= 80){
+  grade = "A-one";
+  remarks = "Excellent";
+}
+else if(percentage >= 70){
+  grade = "A";
+  remarks = "Good";
+}
+else if(percentage >= 60){
+  grade = "B";
+  remarks = "You need to improve";
+}
+else{
+  grade = "Fail";
+  remarks = "Sorry";
+}
+document.write("<h1>Marks Sheet</h1>");
+document.write("Total marks : " + totalMarks + "<br>");
+document.write("Marks obtained : " + marksObtained + "<br>");
+document.write("Percentage : " + percentage + "%<br>");
+document.write("Grade : " + grade + "<br>");
+document.write("Remarks : " + remarks + "<br><br>");
+
+// Q7 - Guess Game
+var secret = 7;
+var guess = +prompt("Guess the secret number (1 to 10)");
+if(guess === secret){
+  alert("Bingo! Correct answer");
+}
+else if(guess + 1 === secret){
+  alert("Close enough to the correct answer");
+}
+
+// Q8 - Divisible by 3
+var num = +prompt("Enter a number to check divisible by 3");
+if(num % 3 === 0){
+  alert("Number is divisible by 3");
+}
+
+// Q9 - Even / Odd
+var num2 = +prompt("Enter a number to check even or odd");
+if(num2 % 2 === 0){
+  alert("Even number");
+}
+else{
+  alert("Odd number");
+}
+
+// Q10 - Temperature
+var temp = +prompt("Enter temperature");
+if(temp > 40){
+  alert("It is too hot outside.");
+}
+else if(temp > 30){
+  alert("The Weather today is Normal.");
+}
+else if(temp > 20){
+  alert("Today's Weather is cool.");
+}
+else if(temp > 10){
+  alert("OMG! Today's weather is so Cool.");
+}
+
+// Q11 - Calculator
+var firstNum = +prompt("Enter first number");
+var secondNum = +prompt("Enter second number");
+var operation = prompt("Enter operation + , - , * , / , %");
+if(operation === "+"){
+  alert(firstNum + secondNum);
+}
+else if(operation === "-"){
+  alert(firstNum - secondNum);
+}
+else if(operation === "*"){
+  alert(firstNum * secondNum);
+}
+else if(operation === "/"){
+  alert(firstNum / secondNum);
+}
+else if(operation === "%"){
+  alert(firstNum % secondNum);
+}
+
+</script>
+
+</body>
+</html>
