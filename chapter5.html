@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 5</title>
+</head>
+<body>
+<script>
+
+// Q1
+var num1 = 3;
+var num2 = 5;
+alert("Sum of 3 and 5 is " + (num1 + num2));
+
+// Q2
+alert("Subtraction of 3 and 5 is " + (num1 - num2) + "\nMultiplication of 3 and 5 is " + (num1 * num2) + "\nDivision of 3 and 5 is " + (num1 / num2) + "\nModulus of 3 and 5 is " + (num1 % num2));
+
+// Q3
+var myNum;
+var q3 = "Value after variable declaration is " + myNum;
+myNum = 5;
+q3 = q3 + "\nInitial value: " + myNum;
+myNum++;
+q3 = q3 + "\nValue after increment is: " + myNum;
+myNum = myNum + 7;
+q3 = q3 + "\nValue after addition is: " + myNum;
+myNum--;
+q3 = q3 + "\nValue after decrement is: " + myNum;
+q3 = q3 + "\nThe remainder is : " + (myNum % 3);
+alert(q3);
+
+// Q4
+var ticketPrice = 600;
+alert("Total cost to buy 5 tickets to a movie is " + (ticketPrice * 5) + "PKR");
+
+// Q5
+alert("Table of 4\n4x1=4\n4x2=8\n4x3=12\n4x4=16\n4x5=20\n4x6=24\n4x7=28\n4x8=32\n4x9=36\n4x10=40");
+
+// Q6
+var celsius = 25;
+var fahrenheit = (celsius * 9/5) + 32;
+var fahrenheit2 = 70;
+var celsius2 = (fahrenheit2 - 32) * 5/9;
+alert(celsius + "°C is " + fahrenheit + "°F\n" + fahrenheit2 + "°F is " + celsius2 + "°C");
+
+// Q7
+var price1 = 650;
+var qty1 = 3;
+var price2 = 100;
+var qty2 = 7;
+var shipping = 100;
+var total = (price1 * qty1) + (price2 * qty2) + shipping;
+alert("Price of item 1 is " + price1 + "\nQuantity of item 1 is " + qty1 + "\nPrice of item 2 is " + price2 + "\nQuantity of item 2 is " + qty2 + "\nShipping Charges " + shipping + "\n\nTotal cost of your order is " + total);
+
+// Q8
+var totalMarks = 980;
+var obtainedMarks = 804;
+var percentage = (obtainedMarks / totalMarks) * 100;
+alert("Total marks: " + totalMarks + "\nMarks obtained: " + obtainedMarks + "\nPercentage: " + percentage + "%");
+
+// Q9
+var pkr = (10 * 104.80) + (25 * 28);
+alert("Total Currency in PKR: " + pkr);
+
+// Q10
+var a = 5;
+alert("Result: " + ((a + 5) * 10) / 2);
+
+// Q11
+alert("Current Year: 2026\nBirth Year: 1992\nYour Age is: " + (2026 - 1992));
+
+// Q12
+var radius = 20;
+var circumference = 2 * 3.142 * radius;
+var area = 3.142 * radius * radius;
+alert("Radius of a circle: " + radius + "\nThe circumference is: " + circumference + "\nThe area is: " + area);
+
+// Q13
+alert("The Lifetime Supply Calculator\n\nFavourite Snack: chocolate chip\nCurrent age: 15\nEstimated Maximum Age: 65\nAmount of snacks per day: 3\nYou will need 150 chocolate chip to last you until the ripe old age of 65");
+
+</script>
+</body>
+</html>
